@@ -6,6 +6,10 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FE4F8DF53089FF4B003ED48B /* ThemeKit in Frameworks */ = {isa = PBXBuildFile; productRef = FE4F8DF43089FF4B003ED48B /* ThemeKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		FEB6F0D53089ED0C0065F7CE /* Scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -22,6 +26,7 @@
 		FEB6F0D23089ED0C0065F7CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				FE4F8DF53089FF4B003ED48B /* ThemeKit in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -60,6 +65,9 @@
 				FEB6F0D73089ED0C0065F7CE /* Scrumdinger */,
 			);
 			name = Scrumdinger;
+			packageProductDependencies = (
+				FE4F8DF43089FF4B003ED48B /* ThemeKit */,
+			);
 			productName = Scrumdinger;
 			productReference = FEB6F0D53089ED0C0065F7CE /* Scrumdinger.app */;
 			productType = "com.apple.product-type.application";
@@ -88,6 +96,9 @@
 			);
 			mainGroup = FEB6F0CC3089ED0C0065F7CE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FE4F8DF33089FF4B003ED48B /* XCLocalSwiftPackageReference "ThemeKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FEB6F0D63089ED0C0065F7CE /* Products */;
 			projectDirPath = "";
@@ -316,6 +327,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		FE4F8DF33089FF4B003ED48B /* XCLocalSwiftPackageReference "ThemeKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ThemeKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE4F8DF43089FF4B003ED48B /* ThemeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ThemeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FEB6F0CD3089ED0C0065F7CE /* Project object */;
 	validationLevel = 1;
