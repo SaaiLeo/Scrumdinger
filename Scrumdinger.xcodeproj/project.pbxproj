@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		FE4F8DF53089FF4B003ED48B /* ThemeKit in Frameworks */ = {isa = PBXBuildFile; productRef = FE4F8DF43089FF4B003ED48B /* ThemeKit */; };
 		FEB40693308B905A00405454 /* TimerKit in Frameworks */ = {isa = PBXBuildFile; productRef = FEB40692308B905A00405454 /* TimerKit */; };
+		FEB406DA308CF60500405454 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB406D9308CF60500405454 /* PreviewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FEB406D9308CF60500405454 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		FEB6F0D53089ED0C0065F7CE /* Scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -34,9 +36,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FEB406D8308CF52300405454 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FEB406D9308CF60500405454 /* PreviewContainer.swift */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		FEB6F0CC3089ED0C0065F7CE = {
 			isa = PBXGroup;
 			children = (
+				FEB406D8308CF52300405454 /* Preview Content */,
 				FEB6F0D73089ED0C0065F7CE /* Scrumdinger */,
 				FEB6F0D63089ED0C0065F7CE /* Products */,
 			);
@@ -125,6 +136,7 @@
 		FEB6F0D13089ED0C0065F7CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				FEB406DA308CF60500405454 /* PreviewContainer.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */
@@ -256,6 +268,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -287,6 +300,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
