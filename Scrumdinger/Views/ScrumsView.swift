@@ -11,6 +11,7 @@ import ThemeKit
 struct ScrumsView: View {
     
     @Binding var scrums: [DailyScrum]
+    @State private var isPresendingNewScrumView = false
     
     var body: some View {
         NavigationStack {
@@ -23,11 +24,15 @@ struct ScrumsView: View {
             }
             .navigationTitle("Daily Scrums")
             .toolbar {
-                Button(action: {}) {
+                Button(action: {
+                    isPresendingNewScrumView = true
+                }) {
                     Image(systemName: "plus")
                 }
                 .accessibilityLabel("New Scrum")
             }
+        }
+        .sheet(isPresented: $isPresendingNewScrumView) {
         }
     }
 }
