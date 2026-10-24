@@ -16,7 +16,7 @@ struct DailyScrumSampleData: PreviewModifier {
         return container
     }
     
-    func body(content: Content, context: ModelContext) -> some View {
+    func body(content: Content, context: ModelContainer) -> some View {
         content.modelContainer(context)
     }
 }

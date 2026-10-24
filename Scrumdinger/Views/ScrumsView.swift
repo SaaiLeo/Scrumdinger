@@ -7,16 +7,17 @@
 
 import SwiftUI
 import ThemeKit
+import SwiftData
 
 struct ScrumsView: View {
     
-    @Binding var scrums: [DailyScrum]
+    @Query(sort: \DailyScrum.title) private var scrums: [DailyScrum]
     @State private var isPresendingNewScrumView = false
     
     var body: some View {
         NavigationStack {
-            List($scrums) { $scrum in
-                NavigationLink(destination: DetailView(scrum: $scrum)) {
+            List(scrums) { scrum in
+                NavigationLink(destination: DetailView(scrum: scrum)) {
                     CardView(scrum: scrum)
                         
                 }
@@ -33,11 +34,11 @@ struct ScrumsView: View {
             }
         }
         .sheet(isPresented: $isPresendingNewScrumView) {
+            NewScrumSheet()
         }
     }
 }
 
-#Preview {
-    @Previewable @State var scrums = DailyScrum.sampleData
-    ScrumsView(scrums: $scrums)
+#Preview(traits: .dailyScrumSampleData) {
+    ScrumsView()
 }
