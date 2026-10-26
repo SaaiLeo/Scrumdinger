@@ -30,6 +30,18 @@ struct MeetingTimerView: View {
             }
             .accessibilityElement(children: .combine)
             .foregroundColor(theme.accentColor)
+            
+            .overlay {
+                ForEach(speakers) { speaker in
+                    if speaker.isCompleted, let index = speakers.firstIndex(where: { $0.id == speaker.id }) {
+                        SpeakerArc(spearkerIndex: index, totalSpeakers: speakers.count)
+                            .rotation(Angle(degrees: -90.0))
+                            .stroke(theme.mainColor, lineWidth: 12)
+                    }
+                }
+                
+            }
+            .padding(.horizontal)
     }
 }
 
