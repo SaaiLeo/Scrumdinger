@@ -17,6 +17,7 @@ struct DetailEditView: View {
     @State private var lengthInMinutesAsDouble: Double
     @State private var attendees: [Attendee]
     @State private var theme: Theme
+    @State private var errorWrapper: ErrorWrapper?
     
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
@@ -93,15 +94,23 @@ struct DetailEditView: View {
             
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") {
-                    saveEdits()
+                    do {
+                        try saveEdits()
+                        dismiss()
+                    } catch {
+                        errorWrapper = ErrorWrapper(error: error, guidance: "Daily Scrum was not recoreded. Try again Later.")
+                    }
                     dismiss()
                 }
             }
         }
-        
-
+        .sheet(item: $errorWrapper) {
+            dismiss()
+        } content: { wrapper in
+            ErrorView(errorWrapper: wrapper)
+        }
     }
-    private func saveEdits() {
+    private func saveEdits() throws {
         scrum.title = title
         scrum.attendees = attendees
         scrum.lengthInMinutesAsDouble = lengthInMinutesAsDouble
@@ -111,7 +120,7 @@ struct DetailEditView: View {
             context.insert(scrum)
         }
         
-        try? context.save()
+        try context.save()
     }
 }
 
