@@ -100,7 +100,6 @@ struct DetailEditView: View {
                     } catch {
                         errorWrapper = ErrorWrapper(error: error, guidance: "Daily Scrum was not recoreded. Try again Later.")
                     }
-                    dismiss()
                 }
             }
         }
