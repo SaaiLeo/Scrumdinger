@@ -17,6 +17,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FEB6F0D43089ED0C0065F7CE"
                BuildableName = "Scrumdinger.app"
+               BlueprintName = "Scrumdinger"
                ReferencedContainer = "container:Scrumdinger.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,6 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FEB6F0D43089ED0C0065F7CE"
             BuildableName = "Scrumdinger.app"
+            BlueprintName = "Scrumdinger"
             ReferencedContainer = "container:Scrumdinger.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,6 +64,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FEB6F0D43089ED0C0065F7CE"
             BuildableName = "Scrumdinger.app"
+            BlueprintName = "Scrumdinger"
             ReferencedContainer = "container:Scrumdinger.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
