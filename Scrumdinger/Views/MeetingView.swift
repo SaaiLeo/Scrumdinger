@@ -19,7 +19,7 @@ struct MeetingView: View {
     @State var scrumTimer = ScrumTimer()
     @Binding var errorWrapper: ErrorWrapper?
     @State var speechRecognizer = SpeechRecognizer()
-    @State var isRecording: Bool = false
+    @State private var isRecording = false
     
     private let player = AVPlayer.dingPlayer()
     
@@ -33,7 +33,7 @@ struct MeetingView: View {
                                   secondsRemaining: scrumTimer.secondsRemaining,
                                   theme: scrum.theme)
                 
-                MeetingTimerView(speakers: scrumTimer.speakers, theme: scrum.theme)
+                MeetingTimerView(speakers: scrumTimer.speakers, isRecording: isRecording, theme: scrum.theme)
                 
                 MeetingFooterView(speakers: scrumTimer.speakers , skipAction: scrumTimer.skipSpeaker)
             }
